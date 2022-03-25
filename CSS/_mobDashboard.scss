@@ -1,0 +1,123 @@
+@media screen and (max-width: 975px) {
+	body {
+		background-color: $LightGrayishBlue;
+		width: 100vw;
+		height: 100vh;
+		.wrapper {
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			@include flex(row, center, center);
+			.box {
+				width: 90%;
+				height: 80%;
+				@include flex(column, center, center);
+				.leftSide {
+					background: url(../images/drawers.jpg) no-repeat;
+					background-size: cover;
+					height: 100%;
+					border-radius: 15px 15px 0 0;
+					width: 100%;
+				}
+				.rightSide {
+					background-color: white;
+					height: 70%;
+					border-radius: 0 0 15px 15px;
+					@include flex(column, center, center);
+					header {
+						padding: 8% 8% 0;
+						h1 {
+							color: $VeryDarkGrayishBlue;
+							font-size: 18px;
+						}
+					}
+					.content {
+						padding: 5% 8% 0;
+						p {
+							text-align: justify;
+							color: $DesaturatedDarkBlue;
+							font-weight: 600;
+							line-height: 1.75em;
+						}
+					}
+				}
+				.lowerSection {
+                    position: relative;
+					height: 40%;
+					background-color: white;
+					width: 80%;
+					padding: 0% 10% 3%;
+					border-radius: 15px;
+					@include flex(row, space-between, center);
+					.person img {
+						@include circleMob;
+						transform: translate(-100%, 50%);
+					}
+					.person {
+						@include flex(column, flex-start, center);
+						span:nth-last-child(1) {
+							transform: translate(20%, -75%);
+							color: $GrayishBlue;
+						}
+						span {
+							transform: translate(30%, -100%);
+							color: $VeryDarkGrayishBlue;
+							font-weight: 700;
+						}
+					}
+					button {
+                        z-index: 1;
+						@include circBtnMob;
+						position: relative;
+						@include flex(row, center, center);
+						transform: translate(0, 25%);
+						img {
+							width: 100%;
+						}
+						
+					}
+				}
+			}
+		}
+	}
+
+	.elementWithShare {
+		opacity: 0;
+	}
+	.elementWithShareActive {
+		opacity: 1;
+		width: 100%;
+		height: 80%;
+		background-color: $VeryDarkGrayishBlue;
+		position: absolute;
+		border-radius: 0 0 15px 15px;
+		@include flex(row, center, center);
+		bottom: 0;
+		right: 0;
+		font-size: 20px;
+		letter-spacing: 0.3em;
+		color: $GrayishBlue;
+		font-weight: 300;
+        z-index: 1;
+		span {
+			margin-right: 2%;
+			font-size: 18px;
+		}
+		img {
+			width: 6%;
+			margin-right: 5%;
+		}
+		img:last-child {
+			margin-right: 30%;
+		}
+	}
+	.attribution {
+		display: none;
+	}
+	.lightBackgroundColorIcon {
+		background-color: hsl(210, 46%, 95%);
+	}
+	.darkBackgroundColorIcon {
+		background-color: hsl(214, 17%, 51%);
+	}
+}

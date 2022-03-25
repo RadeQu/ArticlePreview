@@ -1,0 +1,31 @@
+@mixin flex ($dir, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+@mixin circle {
+    border-radius: 50%;
+    width: 18%;
+    margin-right: 5%;
+}
+@mixin circleMob {
+    border-radius: 50%;
+    width: 40%;
+    margin-right: 5%;
+}
+@mixin circBtn { // Share
+    width: 10%;
+    padding: 3%;
+    border-radius: 50%;
+    outline: hidden;
+    border: hidden;
+}
+@mixin circBtnMob {
+    width: 18%;
+    padding: 5%;
+    border-radius: 50%;
+    outline: hidden;
+    border: hidden;
+    
+}
